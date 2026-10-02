@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --gallery-border   : rgba( 255, 255, 255, 0.08 );
     --gallery-surface  : #111111;
@@ -26,12 +30,14 @@
                  radial-gradient(ellipse at 15% 50%, rgba(0, 220, 185, 0.55) 0%, transparent 55%),
                  #1a1a2e;
     z-index    : -1;
+    overflow-x: hidden;
 }
 
 /* ===================== */
 /* GALLERY WRAPPER       */
 /* ===================== */
 #img7awifather {
+    overflow-x: hidden;
     margin-top : 20px;
     padding    : 5px 24px 60px;
 }

@@ -1,15 +1,10 @@
+import React from 'react';
+import Offer from './Offer';
 
-import Medical from "./medical.jsx";
-import  "./medical.css";
-
-function App() {
-
-
-    return(
-        <div>
-            <Medical/>
-        </div>
-    );
+export default function App() {
+  return (
+    <main className="page-wrapper" dir="rtl">
+      <Offer />
+    </main>
+  );
 }
-
-export default App;
