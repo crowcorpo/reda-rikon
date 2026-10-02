@@ -1,5 +1,5 @@
 import React from 'react';
-import Offer from './Offer';
+import Offer from './offer';
 
 export default function App() {
   return (
