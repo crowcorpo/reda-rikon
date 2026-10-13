@@ -36,7 +36,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Page wrapper tuned for mobile first */
 .dark-page-container {
   width: 100%;
   max-width: 680px;
@@ -118,7 +117,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   overflow: hidden;
 }
 
@@ -132,8 +131,8 @@ html, body {
 
 .arch-portal-glow {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(142, 91, 245, 0.5) 0%, transparent 70%);
   filter: blur(20px);
@@ -142,8 +141,8 @@ html, body {
 .character-cutout {
   position: relative;
   z-index: 2;
-  width: 180px;
-  max-width: 60%;
+  width: 160px;
+  max-width: 55%;
   height: auto;
   display: block;
 }
@@ -153,20 +152,8 @@ html, body {
   width: 100%;
 }
 
-.mini-pill {
-  font-size: 0.75rem;
-  background: rgba(142, 91, 245, 0.2);
-  color: var(--accent-violet-light);
-  border: 1px solid var(--border-glass);
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-weight: 800;
-  display: inline-block;
-  margin-bottom: 8px;
-}
-
 .card-statement {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: #fff;
   line-height: 1.35;
@@ -174,82 +161,83 @@ html, body {
 }
 
 .card-desc {
-  font-size: 0.9rem;
-  color: var(--text-soft);
-  margin-bottom: 16px;
-}
-
-/* Metric Chips */
-.hero-metrics-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 16px;
-  width: 100%;
-}
-
-.metric-chip {
-  background: rgba(15, 9, 26, 0.8);
-  border: 1px solid var(--border-glass);
-  padding: 8px 4px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.metric-num {
-  font-family: var(--font-en);
-  font-size: 1.15rem;
-  font-weight: 900;
-  color: #fff;
-}
-
-.metric-lbl {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-}
-
-.scroll-btn {
-  display: block;
-  width: 100%;
-  background: #ffffff;
-  color: #0b0714;
-  padding: 12px;
-  border-radius: 12px;
   font-size: 0.95rem;
-  font-weight: 800;
-  text-decoration: none;
-  text-align: center;
-}
-
-/* Feature Pills Strip */
-.feature-pill-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.pill-item {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
-  border-radius: 12px;
-  padding: 8px 4px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.pill-title {
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #ffffff;
-}
-
-.pill-sub {
-  font-size: 0.68rem;
+  font-weight: 700;
   color: var(--accent-violet-light);
+  margin-bottom: 16px;
+}
+
+/* Pricing inside Hero Card */
+.hero-price-box {
+  background: rgba(14, 8, 24, 0.65);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 16px 10px;
+  margin-bottom: 14px;
+}
+
+.ticket-tag {
+  background: rgba(142, 91, 245, 0.2);
+  color: var(--accent-violet-light);
+  border: 1px solid var(--border-glass);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.price-numbers {
+  margin: 10px 0 6px 0;
+}
+
+.strike-price {
+  font-family: var(--font-en);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  display: block;
+}
+
+.main-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.main-price .num {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.main-price .cur {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent-violet-light);
+}
+
+.ticket-subtext {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  margin-bottom: 14px;
+}
+
+.details-anchor-btn {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 4px 10px;
+  transition: color 0.15s ease;
+}
+
+.details-anchor-btn:hover {
+  color: #fff;
 }
 
 /* Intro Hook Box */
@@ -349,24 +337,18 @@ html, body {
   line-height: 1.5;
 }
 
-/* Proof Images Grid */
-.proof-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 12px;
-  width: 100%;
-}
-
-.proof-frame {
+/* Single Compact Proof Image */
+.single-proof-frame {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border-glass-strong);
   width: 100%;
+  max-width: 260px;
+  margin-top: 10px;
 }
 
-.proof-frame img {
+.single-proof-frame img {
   width: 100%;
   height: auto;
   display: block;
@@ -379,7 +361,7 @@ html, body {
   background: rgba(9, 6, 17, 0.9);
   color: var(--accent-violet-light);
   border: 1px solid var(--border-glass);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 800;
   padding: 2px 6px;
   border-radius: 4px;
@@ -434,28 +416,6 @@ html, body {
   color: #ffffff;
 }
 
-/* Sample Showcase */
-.sample-showcase {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border-glass);
-}
-
-.sample-title {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--accent-violet-light);
-  font-weight: 800;
-  margin-bottom: 6px;
-}
-
-.sample-img {
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid var(--border-glass);
-  display: block;
-}
-
 /* Guarantee Box */
 .dark-guarantee-box {
   background: rgba(22, 13, 38, 0.9);
@@ -478,66 +438,7 @@ html, body {
   line-height: 1.55;
 }
 
-/* Pricing Section */
-.dark-price-card {
-  background: linear-gradient(180deg, rgba(28, 17, 48, 0.95) 0%, rgba(16, 10, 28, 1) 100%);
-  border: 1px solid var(--border-glass-strong);
-  border-radius: 20px;
-  padding: 24px 14px;
-  text-align: center;
-}
-
-.ticket-tag {
-  background: rgba(142, 91, 245, 0.2);
-  color: var(--accent-violet-light);
-  border: 1px solid var(--border-glass);
-  font-size: 0.8rem;
-  font-weight: 800;
-  padding: 4px 12px;
-  border-radius: 999px;
-  display: inline-block;
-}
-
-.price-numbers {
-  margin: 14px 0;
-}
-
-.strike-price {
-  font-family: var(--font-en);
-  font-size: 1rem;
-  color: var(--text-muted);
-  text-decoration: line-through;
-  display: block;
-}
-
-.main-price {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 4px;
-}
-
-.main-price .num {
-  font-family: var(--font-en);
-  font-size: 2.9rem;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.1;
-}
-
-.main-price .cur {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--accent-violet-light);
-}
-
-.ticket-subtext {
-  font-size: 0.82rem;
-  color: var(--text-soft);
-  margin-bottom: 18px;
-}
-
-/* Compact WhatsApp CTA Button */
+/* WhatsApp CTA Button */
 .cta-wrapper {
   display: flex;
   justify-content: center;
@@ -550,32 +451,31 @@ html, body {
   justify-content: center;
   gap: 8px;
   width: auto;
-  max-width: fit-content;
-  background-color: #00ff5e3d;
+  max-width: 100%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 800;
   padding: 12px 22px;
   border-radius: 999px;
-  border: 1px solid rgba(238, 240, 239, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .whatsapp-compact-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
 .whatsapp-compact-btn:active {
   transform: scale(0.97);
 }
 
-.wa-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+.bottom-checkout-action {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .payment-badges {
@@ -587,7 +487,7 @@ html, body {
   font-size: 0.75rem;
   color: var(--text-muted);
   font-weight: 700;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
 /* Tablet / Desktop scaling */
@@ -598,11 +498,6 @@ html, body {
   
   .dark-page-container {
     padding: 24px 16px 80px 16px;
-  }
-
-  .proof-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
 
   .hero-stage-card {
