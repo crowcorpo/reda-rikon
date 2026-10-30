@@ -1,16 +1,51 @@
 import React from 'react';
 import './offer.css';
+import { useState } from 'react';
 
 import photo from "./assets/225.png";
 import photo3 from "./assets/kkkk.png";
 
 export default function Offer() {
   const whatsappNumber = "213792148822"; 
-  const whatsappMessage = encodeURIComponent("سلام عليكم، حاب نتحصل على الدليل الكامل لصناعة فيديوهات الـ AI.");
+  const whatsappMessage = encodeURIComponent("سلام عليكم، حاب نشري على الدليل الكامل لصناعة فيديوهات الـ AI.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const [isOpen, setIsOpen] = useState(true);
+
+const handleCloseNotice = () => {
+  setIsOpen(false);
+};
 
   return (
     <div className="dark-page-container">
+      {isOpen && (
+  <div className="notice-overlay">
+    <div className="notice-card" dir="rtl">
+      <button 
+        type="button" 
+        className="notice-close-btn" 
+        onClick={handleCloseNotice}
+        aria-label="غلق"
+      >
+        &times;
+      </button>
+
+      <div className="notice-badge">⚠️ تنبيه مهم</div>
+      
+      <h3 className="notice-text">
+        رجاءً اقرى كلش قبل ما تشري
+      </h3>
+
+      <button 
+        type="button" 
+        className="notice-action-btn" 
+        onClick={handleCloseNotice}
+      >
+        فهمت، كمل القراءة
+      </button>
+    </div>
+  </div>
+)}
       {/* Top Header Bar */}
       <nav className="mini-nav">
         <div className="brand-logo">AI CREATOR<span>.</span></div>
@@ -51,7 +86,7 @@ export default function Offer() {
               <div className="price-numbers">
                 <span className="strike-price">6,900 DA</span>
                 <div className="main-price">
-                  <span className="num">4,900</span>
+                  <span className="num">2500</span>
                   <span className="cur">د.ج (DA)</span>
                 </div>
               </div>
@@ -192,7 +227,7 @@ export default function Offer() {
               rel="noopener noreferrer" 
               className="whatsapp-compact-btn"
             >
-              <span>اطلب الدليل عبر واتساب (4,900 د.ج)</span>
+              <span>اطلب الدليل عبر واتساب (2500 د.ج)</span>
             </a>
           </div>
           <div className="payment-badges">
